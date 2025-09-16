@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五星93家庭日邀请函</title>
+    <audio id="background-music" src="./曲算子-雪龙吟.mp3" loop preload="auto"></audio>
+    <div class="music-control" id="music-control">
+        <i class="fas fa-music"></i>
+    </div>
+    <meta property="og:title" content="五星93家庭日邀请函">
+    <meta property="og:description" content="五星93全体成员邀您来参加欢乐家庭日！">
+    <meta property="og:image" content="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/WsLdLMRuqtWgXMjA.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'CrayonFont';
+            src: url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/CrayonFont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'CrayonFont', "Comic Sans MS", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #FFECB3 0%, #FFD700 50%, #FFF8DC 100%); /* 蜡笔小新主题色 */
+            position: relative;
+        }
+
+        /* 蜡笔小新装饰元素 */
+        .shinchan-decoration {
+            position: fixed;
+            z-index: 1000;
+            pointer-events: none;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .shinchan-decoration img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+        }
+
+        .shinchan-decoration:nth-child(1) { 
+            top: 10%; 
+            left: 5%; 
+            animation-delay: 0s; 
+        }
+        .shinchan-decoration:nth-child(2) { 
+            top: 20%; 
+            right: 10%; 
+            animation-delay: 1s; 
+        }
+        .shinchan-decoration:nth-child(3) { 
+            bottom: 30%; 
+            left: 8%; 
+            animation-delay: 2s; 
+        }
+        .shinchan-decoration:nth-child(4) { 
+            bottom: 15%; 
+            right: 5%; 
+            animation-delay: 0.5s; 
+        }
+        .shinchan-decoration:nth-child(5) { 
+            top: 35%; 
+            left: 15%; 
+            animation-delay: 1.5s; 
+        }
+        .shinchan-decoration:nth-child(6) { 
+            top: 50%; 
+            right: 20%; 
+            animation-delay: 2.5s; 
+        }
+        .shinchan-decoration:nth-child(7) { 
+            bottom: 50%; 
+            left: 3%; 
+            animation-delay: 3s; 
+        }
+        .shinchan-decoration:nth-child(8) { 
+            bottom: 60%; 
+            right: 15%; 
+            animation-delay: 0.8s; 
+        }
+        .shinchan-decoration:nth-child(9) { 
+            top: 70%; 
+            left: 25%; 
+            animation-delay: 1.8s; 
+        }
+        .shinchan-decoration:nth-child(10) { 
+            top: 80%; 
+            right: 8%; 
+            animation-delay: 2.8s; 
+        }
+        .shinchan-decoration:nth-child(11) { 
+            bottom: 80%; 
+            left: 12%; 
+            animation-delay: 3.5s; 
+        }
+        .shinchan-decoration:nth-child(12) { 
+            bottom: 25%; 
+            right: 25%; 
+            animation-delay: 1.2s; 
+        }
+        .shinchan-decoration:nth-child(13) { 
+            top: 15%; 
+            left: 30%; 
+            animation-delay: 2.2s; 
+        }
+        .shinchan-decoration:nth-child(14) { 
+            top: 60%; 
+            right: 30%; 
+            animation-delay: 3.2s; 
+        }
+        .shinchan-decoration:nth-child(15) { 
+            bottom: 40%; 
+            left: 20%; 
+            animation-delay: 0.3s; 
+        }
+        .shinchan-decoration:nth-child(16) { 
+            bottom: 70%; 
+            right: 3%; 
+            animation-delay: 1.3s; 
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(5deg); }
+        }
+
+        /* 音乐控制按钮 */
+        .music-control {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1001;
+            background: rgba(255, 255, 255, 0.9);
+            border: 3px solid #FF69B4; /* 粉色边框 */
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .music-control:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .music-control i {
+            font-size: 1.5rem;
+            color: #FF1493; /* 深粉色 */
+        }
+
+        /* 封面页 */
+        .hero-section {
+            height: 100vh;
+            background: linear-gradient(135deg, #FFECB3 0%, #FFD700 100%); /* 蜡笔小新主题色 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #333;
+            position: relative;
+            overflow: hidden;
+            padding: 2rem;
+        }
+
+        .hero-section::before {
+            content: ">";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/mmZeUucqfNzAIUdH.jpg") center/cover no-repeat;
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+        }
+
+        .shinchan-character-main {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 2rem;
+            animation: bounce 2s infinite;
+            filter: drop-shadow(3px 3px 6px rgba(0,0,0,0.3));
+        }
+
+        .shinchan-character-main img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-20px); }
+            60% { transform: translateY(-10px); }
+        }
+
+        .hero-title {
+            font-size: 2.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #FF1493; /* 深粉色 */
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+            font-family: 'CrayonFont', cursive, "Microsoft YaHei";
+        }
+
+        .hero-subtitle {
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+            color: #4169E1; /* 蓝色 */
+            font-weight: 600;
+        }
+
+        .event-info {
+            background: rgba(255,255,255,0.95);
+            border-radius: 25px;
+            padding: 2rem;
+            margin-top: 1rem;
+            border: 4px solid #FF69B4; /* 粉色边框 */
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .event-date {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #FF1493;
+        }
+
+        .event-location {
+            font-size: 1.1rem;
+            color: #4169E1;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            z-index: 2;
+        }
+
+        .scroll-indicator i {
+            font-size: 2rem;
+            color: #FF1493;
+        }
+
+        /* 队呼页 */
+        .slogan-section {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #FF69B4 0%, #FFC0CB 100%); /* 粉色系 */
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .slogan-section::before {
+            content: ">";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/WAQQWKDSIcUyQyHh.jpg") center/cover no-repeat;
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+        .slogan-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .slogan-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-family: 'CrayonFont', cursive, "Microsoft YaHei";
+        }
+
+        .slogan-text {
+            font-size: 2rem;
+            font-weight: bold;
+            background: rgba(255,255,255,0.2);
+            border-radius: 25px;
+            padding: 2rem;
+            border: 4px solid rgba(255,255,255,0.4);
+            backdrop-filter: blur(15px);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* 邀请函页 */
+        .invitation-section {
+            background: linear-gradient(135deg, #FFE4E1 0%, #FFC0CB 50%, #FFB6C1 100%); /* 粉色系 */
+        }
+
+        .invitation-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .invitation-card {
+            background: white;
+            border-radius: 25px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 4px solid #FF69B4; /* 粉色边框 */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .invitation-card:hover {
+            transform: translateY(-10px) rotate(1deg);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+        }
+
+        .invitation-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            gap: 1.5rem;
+        }
+
+        .shinchan-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #FF69B4;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .shinchan-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .invitation-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #FF1493; /* 深粉色 */
+            font-family: 'CrayonFont', cursive, "Microsoft YaHei";
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .invitation-message {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .invitation-message p {
+            margin-bottom: 1.5rem;
+            text-indent: 2em; /* 段落首行缩进 */
+        }
+
+        .invitation-highlight {
+            font-weight: bold;
+            color: #FF1493 !important;
+            font-size: 1.2rem !important;
+            text-align: center;
+            background: linear-gradient(135deg, #FFE4E1, #FFC0CB);
+            padding: 1rem;
+            border-radius: 15px;
+            border: 2px solid #FF69B4;
+            text-indent: 0 !important; /* 重点文字不缩进 */
+        }
+
+        /* 通用样式 */
+        .section {
+            padding: 4rem 2rem;
+            position: relative;
+            background: linear-gradient(135deg, #FFECB3 0%, #FFD700 50%, #FFF8DC 100%); /* 蜡笔小新主题色 */
+        }
+
+        .section::before {
+            content: ">";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/mmZeUucqfNzAIUdH.jpg") center/cover no-repeat;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #FF1493; /* 深粉色 */
+            margin-bottom: 3rem;
+            position: relative;
+            font-family: 'CrayonFont', cursive, "Microsoft YaHei";
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            z-index: 2;
+        }
+
+        .section-title::after {
+            content: ">";
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 8px;
+            background: linear-gradient(to right, #FF1493, #FF69B4);
+            border-radius: 4px;
+        }
+
+        /* 团队风采页 */
+        .team-section {
+            background: linear-gradient(to bottom, #FFD700 0%, #FFA500 100%);
+        }
+
+        .team-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 4px solid #FF69B4; /* 粉色边框 */
+            position: relative;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px) rotate(2deg);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+        }
+
+        .team-card img {
+            width: 100%;
+            height: 250px; /* 固定高度 */
+            object-fit: contain; /* 完整显示图片 */
+            background-color: #F0F8FF; /* 浅蓝色背景，防止透明图层 */
+        }
+
+        .team-card-content {
+            padding: 1.5rem;
+        }
+
+        .team-card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .team-card-role {
+            color: #666;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        /* 照片展示页 */
+        .photos-section {
+            background: linear-gradient(135deg, #ADD8E6 0%, #87CEEB 100%); /* 浅蓝色系 */
+        }
+
+        .photos-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .photo-card {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 4px solid #FF69B4; /* 粉色边框 */
+        }
+
+        .photo-card:hover {
+            transform: translateY(-10px) rotate(-2deg);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 250px; /* 固定高度 */
+            object-fit: contain; /* 完整显示图片 */
+            background-color: #F0F8FF; /* 浅蓝色背景，防止透明图层 */
+        }
+
+        .photo-card-content {
+            padding: 1.5rem;
+        }
+
+        .photo-card-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .photo-card-description {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* 活动介绍页 */
+        .intro-section {
+            background: linear-gradient(135deg, #FFECB3 0%, #FFD700 100%); /* 蜡笔小新主题色 */
+        }
+
+        .intro-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .intro-card {
+            background: white;
+            border-radius: 25px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 4px solid #FF69B4; /* 粉色边框 */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intro-card:hover {
+            transform: translateY(-15px) rotate(-2deg);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            color: #FF1493; /* 深粉色 */
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .card-description {
+            color: #666;
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        /* 活动流程 */
+        .schedule-section {
+            background: linear-gradient(135deg, #FF69B4 0%, #FFC0CB 100%); /* 粉色系 */
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .timeline::before {
+            content: ">";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: rgba(255,255,255,0.5);
+            border-radius: 3px;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            flex: 1;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 0 2rem;
+            border: 3px solid rgba(255,255,255,0.4);
+        }
+
+        .timeline-time {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-description {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: white;
+            border: 4px solid #FF69B4; /* 粉色边框 */
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+        /* 报名表单 */
+        .form-section {
+            background: linear-gradient(135deg, #FFECB3 0%, #FFD700 100%); /* 蜡笔小新主题色 */
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 25px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border: 4px solid #FF69B4; /* 粉色边框 */
+            position: relative;
+            z-index: 2;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 1rem;
+            border: 3px solid #FF69B4; /* 粉色边框 */
+            border-radius: 15px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #FF1493;
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-button {
+            width: 100%;
+            padding: 1.2rem;
+            background: linear-gradient(135deg, #FF1493 0%, #FF69B4 100%); /* 粉色系 */
+            color: white;
+            border: none;
+            border-radius: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-button:hover {
+            transform: translateY(-3px);
+        }
+
+        /* 联系方式 */
+        .contact-section {
+            background: linear-gradient(135deg, #FFC0CB 0%, #FF69B4 100%); /* 粉色系 */
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            background: white;
+            border-radius: 25px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border: 4px solid #FF69B4; /* 粉色边框 */
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-item {
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+        }
+
+        .contact-label {
+            font-weight: bold;
+            color: #FF1493;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .contact-value {
+            color: #333;
+        }
+
+        /* 分享按钮 */
+        .share-section {
+            background: linear-gradient(135deg, #FFD700 0%, #FFECB3 100%); /* 蜡笔小新主题色 */
+            text-align: center;
+            color: white;
+        }
+
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .share-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            border: 3px solid rgba(255,255,255,0.4);
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .share-button:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-3px);
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .slogan-title {
+                font-size: 2rem;
+            }
+
+            .slogan-text {
+                font-size: 1.5rem;
+            }
+
+            .team-grid,
+            .photos-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .intro-content {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-item {
+                flex-direction: column !important;
+                text-align: center;
+            }
+
+            .timeline-content {
+                margin: 1rem 0;
+            }
+
+            .timeline::before {
+                display: none;
+            }
+
+            .timeline-dot {
+                position: relative;
+                left: auto;
+                transform: none;
+                margin: 1rem auto;
+            }
+
+            .share-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .shinchan-decoration {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 蜡笔小新装饰元素 -->
+    <div class="shinchan-decoration" style="top: 10%; left: 5%;">
+        <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/fkRJOMWTlXfOwGZF.jpg" alt="蜡笔小新">
+    </div>
+    <div class="shinchan-decoration" style="top: 20%; right: 10%;">
+        <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/fPknjWdwQVhMyosp.png" alt="小白">
+    </div>
+    <div class="shinchan-decoration" style="bottom: 30%; left: 8%;">
+        <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/OsXENkMNyOweJLMq.jpeg" alt="动感超人">
+    </div>
+    <div class="shinchan-decoration" style="bottom: 15%; right: 5%;">
+        <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/ccjeuPomKVOdNXwN.jpg" alt="小白">
+    </div>
+    <div class="shinchan-decoration" style="top: 35%; left: 15%;">
+        <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/fkRJOMWTlXfOwGZF.jpg" alt="蜡笔小新">
+    </div>
+    <div class="shinchan-decoration" style="top: 50%; right: 20%;">
+        <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/fPknjWdwQVhMyosp.png" alt="小白">
+    </div>
+    <div class="shinchan-decoration" style="bottom: 50%; left: 3%;">
+        <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/OsXENkMNyOweJLMq.jpeg" alt="动感超人">
+    </div>
+    <div class="shinchan-decoration" style="bottom: 60%; right: 15%;">
+        <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/ccjeuPomKVOdNXwN.jpg" alt="小白">
+    </div>
+    <div class="shinchan-decoration" style="top: 70%; left: 25%;">
+        <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/fkRJOMWTlXfOwGZF.jpg" alt="蜡笔小新">
+    </div>
+    <div class="shinchan-decoration" style="top: 80%; right: 8%;">
+        <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/fPknjWdwQVhMyosp.png" alt="小白">
+    </div>
+    <div class="shinchan-decoration" style="bottom: 80%; left: 12%;">
+        <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/OsXENkMNyOweJLMq.jpeg" alt="动感超人">
+    </div>
+    <div class="shinchan-decoration" style="bottom: 25%; right: 25%;">
+        <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/ccjeuPomKVOdNXwN.jpg" alt="小白">
+    </div>
+    <div class="shinchan-decoration" style="top: 15%; left: 30%;">
+        <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/fkRJOMWTlXfOwGZF.jpg" alt="蜡笔小新">
+    </div>
+    <div class="shinchan-decoration" style="top: 60%; right: 30%;">
+        <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/fPknjWdwQVhMyosp.png" alt="小白">
+    </div>
+    <div class="shinchan-decoration" style="bottom: 40%; left: 20%;">
+        <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/OsXENkMNyOweJLMq.jpeg" alt="动感超人">
+    </div>
+    <div class="shinchan-decoration" style="bottom: 70%; right: 3%;">
+        <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/ccjeuPomKVOdNXwN.jpg" alt="小白">
+    </div>
+
+    <!-- 音乐控制按钮 -->
+    <div class="music-control" onclick="toggleMusic()">
+        <i class="fas fa-music" id="musicIcon"></i>
+    </div>
+
+    <!-- 背景音乐 -->
+    <audio id="bgMusic" loop>
+        <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/ERIoOTpXmNqCDifv.wav" type="audio/wav">
+    </audio>
+
+    <!-- 封面页 -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="shinchan-character-main">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/fkRJOMWTlXfOwGZF.jpg" alt="蜡笔小新">
+            </div>
+            <h1 class="hero-title">五星93家庭日邀请函</h1>
+            <p class="hero-subtitle">五星93全体成员邀您来参加欢乐家庭日</p>
+            <div class="event-info">
+                <div class="event-date">2025年9月20日（星期六）</div>
+                <div class="event-date">13:00 - 20:00</div>
+                <div class="event-location">台州市路桥区螺洋街道水心草堂<br>(洳婳·宋韵)</div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- 队呼页 -->
+    <section class="slogan-section">
+        <div class="slogan-content">
+            <h2 class="slogan-title">93队呼</h2>
+            <div class="slogan-text">五星93，王者出山！</div>
+        </div>
+    </section>
+
+    <!-- 邀请函页 -->
+    <section class="section invitation-section">
+        <h2 class="section-title">诚挚邀请</h2>
+        <div class="invitation-content">
+            <div class="invitation-card">
+                <div class="invitation-header">
+                    <div class="shinchan-avatar">
+                        <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/fkRJOMWTlXfOwGZF.jpg" alt="蜡笔小新">
+                    </div>
+                    <h3 class="invitation-title">致亲爱的93期师兄师姐们</h3>
+                </div>
+                <div class="invitation-message">
+                    <p>时光荏苒，岁月如歌。还记得我们共同奋斗的那些日子吗？那些汗水与欢笑，那些挑战与成长，都化作了我们生命中最宝贵的财富。</p>
+                    <p>如今，五星93期家庭日即将温馨开启，我们诚挚地邀请您，带着您的家人，回到这个充满爱与温暖的大家庭！</p>
+                    <p>在这里，有我们共同的回忆，有新老朋友的欢声笑语，更有为孩子们精心准备的趣味活动。让我们暂时放下繁忙的工作，与家人一起享受这难得的亲子时光，重温昔日情谊，共创美好回忆。</p>
+                    <p class="invitation-highlight">您的到来，将是我们家庭日最闪耀的光芒！</p>
+                </div>
+            </div>
+            
+            <div class="invitation-card">
+                <div class="invitation-header">
+                    <div class="shinchan-avatar">
+                        <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/fPknjWdwQVhMyosp.png" alt="小白">
+                    </div>
+                    <h3 class="invitation-title">致亲爱的93期学弟学妹们</h3>
+                </div>
+                <div class="invitation-message">
+                    <p>欢迎加入五星93这个充满活力与爱的大家庭！我们深知，从踏入这个集体的那一刻起，你们就肩负着传承与创新的使命。</p>
+                    <p>为了让大家更好地融入，感受团队的温暖，我们特意举办了这场温馨的家庭日活动。</p>
+                    <p>在这里，你们不仅能结识更多志同道合的伙伴，还能与家人一同体验丰富多彩的活动。我们希望通过这次机会，让你们感受到五星93不仅是学习和成长的平台，更是可以依靠和分享的港湾。</p>
+                    <p class="invitation-highlight">带着您的家人一起来吧，让我们一起创造属于五星93的更多精彩瞬间！</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 团队风采页 -->
+    <section class="section team-section">
+        <h2 class="section-title">团队风采</h2>
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/iqMeOKxPmgBEVddF.png" alt="导师朴日勇">
+                <div class="team-card-content">
+                    <div class="team-card-title">朴日勇</div>
+                    <div class="team-card-role">导师</div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/mllZvhiNBPgbumdT.jpg" alt="平台天使导师张怡">
+                <div class="team-card-content">
+                    <div class="team-card-title">张怡</div>
+                    <div class="team-card-role">平台天使导师</div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/XhhtxWpovmzZlMJw.jpg" alt="教练团总教练蒋国忠">
+                <div class="team-card-content">
+                    <div class="team-card-title">蒋国忠</div>
+                    <div class="team-card-role">教练团总教练</div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/crqDjJRUAkPkETiJ.jpg" alt="教练团团长胡军">
+                <div class="team-card-content">
+                    <div class="team-card-title">胡军</div>
+                    <div class="team-card-role">教练团团长</div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/JRusrCwEVljAXBEB.jpg" alt="教练方利娇">
+                <div class="team-card-content">
+                    <div class="team-card-title">方利娇</div>
+                    <div class="team-card-role">教练</div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/nbfyadFtqDmzkgwh.jpg" alt="教练孙涛涛">
+                <div class="team-card-content">
+                    <div class="team-card-title">孙涛涛</div>
+                    <div class="team-card-role">教练</div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/sJIGTpZNFZPhiwLZ.jpg" alt="教练金飞">
+                <div class="team-card-content">
+                    <div class="team-card-title">金飞</div>
+                    <div class="team-card-role">教练</div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/sgyDWnBBBeFUVEYh.jpg" alt="教练倪红">
+                <div class="team-card-content">
+                    <div class="team-card-title">倪红</div>
+                    <div class="team-card-role">教练</div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/igGwdwtMosmKuLcQ.jpg" alt="教练郑超">
+                <div class="team-card-content">
+                    <div class="team-card-title">郑超</div>
+                    <div class="team-card-role">教练</div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/VYZMbqrEaBNaznKo.jpg" alt="家庭总监苏玲茵">
+                <div class="team-card-content">
+                    <div class="team-card-title">苏玲茵</div>
+                    <div class="team-card-role">家庭总监</div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/rRHwHOQXqOSZdRmJ.jpg" alt="事业总监张文">
+                <div class="team-card-content">
+                    <div class="team-card-title">张文</div>
+                    <div class="team-card-role">事业总监</div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/ZVEVnCugiZcYtNfY.jpg" alt="财务总监叶家成">
+                <div class="team-card-content">
+                    <div class="team-card-title">叶家成</div>
+                    <div class="team-card-role">财务总监</div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/KmlnHRaOxRwfcwHA.jpg" alt="健康总监吴兴跃">
+                <div class="team-card-content">
+                    <div class="team-card-title">吴兴跃</div>
+                    <div class="team-card-role">健康总监</div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/CRxcZkxLRSqMXGpt.jpg" alt="守则总监钟伙秀">
+                <div class="team-card-content">
+                    <div class="team-card-title">钟伙秀</div>
+                    <div class="team-card-role">守则总监</div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/bfQOZSjPRIGUicCp.jpg" alt="形象总监罗鹤燕">
+                <div class="team-card-content">
+                    <div class="team-card-title">罗鹤燕</div>
+                    <div class="team-card-role">形象总监</div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/MjtRnzVDTxUhCFWF.jpg" alt="学习总监张康">
+                <div class="team-card-content">
+                    <div class="team-card-title">张康</div>
+                    <div class="team-card-role">学习总监</div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/PfeYWzhgTxAeUccq.jpg" alt="学员大队长周熹">
+                <div class="team-card-content">
+                    <div class="team-card-title">周熹</div>
+                    <div class="team-card-role">学员大队长</div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/spCOYQaCckLczFyH.jpg" alt="心连心总监范军辉">
+                <div class="team-card-content">
+                    <div class="team-card-title">范军辉</div>
+                    <div class="team-card-role">心连心总监</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 精彩瞬间页 -->
+    <section class="section photos-section">
+        <h2 class="section-title">精彩瞬间</h2>
+        <div class="photos-grid">
+            <div class="photo-card">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/WRuSYoRheLAOBETb.jpg" alt="93大合影">
+                <div class="photo-card-content">
+                    <div class="photo-card-title">93大合影</div>
+                    <div class="photo-card-description">五星93，王者出山！团队大合影留念</div>
+                </div>
+            </div>
+            <div class="photo-card">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/fwjhDMwBeEwGGvEU.jpg" alt="93团队快乐合影">
+                <div class="photo-card-content">
+                    <div class="photo-card-title">93团队快乐合影</div>
+                    <div class="photo-card-description">楼梯间的快乐时光，团队凝聚力满满</div>
+                </div>
+            </div>
+            <div class="photo-card">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/rKBqJJFYGNdiUuVV.jpg" alt="91心连心活动出发仪式">
+                <div class="photo-card-content">
+                    <div class="photo-card-title">五星91心连心活动出发仪式</div>
+                    <div class="photo-card-description">参加五星91心连心活动出发仪式</div>
+                </div>
+            </div>
+            <div class="photo-card">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/EPGukGTWvOzivGzB.jpg" alt="94一阶段毕业接学弟学妹毕业">
+                <div class="photo-card-content">
+                    <div class="photo-card-title">94一阶段毕业接学弟学妹毕业</div>
+                    <div class="photo-card-description">传承与成长，接学弟学妹毕业典礼</div>
+                </div>
+            </div>
+            <div class="photo-card">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/HwIfjoJUeWXQVzri.jpg" alt="爱心活动">
+                <div class="photo-card-content">
+                    <div class="photo-card-title">爱心慰问活动</div>
+                    <div class="photo-card-description">传递温暖，爱心慰问活动现场</div>
+                </div>
+            </div>
+            <div class="photo-card">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/NYMJIUSgbVcjTqVb.jpg" alt="爱心活动1">
+                <div class="photo-card-content">
+                    <div class="photo-card-title">爱心慰问活动</div>
+                    <div class="photo-card-description">关爱社会，传递正能量</div>
+                </div>
+            </div>
+            <div class="photo-card">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/HNhFhOJwxukUniQm.jpg" alt="92家庭日合照">
+                <div class="photo-card-content">
+                    <div class="photo-card-title">92家庭日合照</div>
+                    <div class="photo-card-description">家庭日活动，温馨合影</div>
+                </div>
+            </div>
+            <div class="photo-card">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/ZmWVlEPiNzCJngVM.jpg" alt="93三阶段首周团队合影">
+                <div class="photo-card-content">
+                    <div class="photo-card-title">93三阶段首周团队合影</div>
+                    <div class="photo-card-description">新阶段新开始，团队合影留念</div>
+                </div>
+            </div>
+            <div class="photo-card">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/XSpGxifBDIqNSJUu.jpg" alt="暖阳城市公益活动">
+                <div class="photo-card-content">
+                    <div class="photo-card-title">暖阳城市公益活动</div>
+                    <div class="photo-card-description">参与城市公益，传递暖阳精神</div>
+                </div>
+            </div>
+            <div class="photo-card">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663140378396/WulrNlurRpJQzsFc.jpg" alt="93中周合影，雨后见彩虹">
+                <div class="photo-card-content">
+                    <div class="photo-card-title">93中周合影，雨后见彩虹</div>
+                    <div class="photo-card-description">风雨过后见彩虹，团队精神永不灭</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 活动亮点页 -->
+    <section class="section intro-section">
+        <h2 class="section-title">活动亮点</h2>
+        <div class="intro-content">
+            <div class="intro-card">
+                <div class="card-icon">🎉</div>
+                <div class="card-title">团队聚会</div>
+                <div class="card-description">五星93全体成员齐聚一堂，增进友谊，分享快乐时光。</div>
+            </div>
+            <div class="intro-card">
+                <div class="card-icon">🎮</div>
+                <div class="card-title">趣味游戏</div>
+                <div class="card-description">精心设计的团队游戏，增强团队凝聚力和协作精神。</div>
+            </div>
+            <div class="intro-card">
+                <div class="card-icon">🍽️</div>
+                <div class="card-title">美食盛宴</div>
+                <div class="card-description">丰富的美食佳肴，让大家在品尝美味的同时享受温馨时光。</div>
+            </div>
+            <div class="intro-card">
+                <div class="card-icon">👨‍👩‍👧‍👦</div>
+                <div class="card-title">亲子时光</div>
+                <div class="card-description">特别安排的亲子活动，让家人们共同参与，增进家庭和睦。</div>
+            </div>
+            <div class="intro-card">
+                <div class="card-icon">🎁</div>
+                <div class="card-title">精美礼品</div>
+                <div class="card-description">为每位参与者准备了精美的纪念礼品，留下美好回忆。</div>
+            </div>
+            <div class="intro-card">
+                <div class="card-icon">❤️</div>
+                <div class="card-title">五星91心连心活动参加</div>
+                <div class="card-description">参与五星91心连心活动，传递温暖，体现团队大爱精神。</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 活动流程页 -->
+    <section class="section schedule-section">
+        <h2 class="section-title">活动流程</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-time">13:00 - 13:30</div>
+                    <div class="timeline-title">签到入场</div>
+                    <div class="timeline-description">参与者签到，领取活动物品，自由交流</div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-time">13:30 - 14:00</div>
+                    <div class="timeline-title">开场致辞</div>
+                    <div class="timeline-description">领导致辞，介绍活动安排，团队队呼</div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-time">14:00 - 16:00</div>
+                    <div class="timeline-title">趣味游戏</div>
+                    <div class="timeline-description">团队游戏，亲子互动，增进感情</div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-time">16:00 - 16:30</div>
+                    <div class="timeline-title">茶歇时间</div>
+                    <div class="timeline-description">休息放松，品尝茶点，自由交流</div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-time">16:30 - 18:00</div>
+                    <div class="timeline-title">美食时光</div>
+                    <div class="timeline-description">享用丰盛晚餐，家庭聚餐氛围</div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-time">18:00 - 19:30</div>
+                    <div class="timeline-title">分享交流</div>
+                    <div class="timeline-description">成员分享，经验交流，颁发纪念品</div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-time">19:30 - 20:00</div>
+                    <div class="timeline-title">合影留念</div>
+                    <div class="timeline-description">全体合影，活动圆满结束</div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 报名表单页 -->
+    <section class="section form-section">
+        <h2 class="section-title">立即报名</h2>
+        <div class="form-container">
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label class="form-label" for="name">姓名 *</label>
+                    <input type="text" id="name" name="name" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="phone">联系电话 *</label>
+                    <input type="tel" id="phone" name="phone" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="participants">参与人数 *</label>
+                    <input type="number" id="participants" name="participants" class="form-input" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="notes">特殊需求或备注</label>
+                    <textarea id="notes" name="notes" class="form-input form-textarea" placeholder="请填写特殊需求、饮食禁忌或其他备注信息"></textarea>
+                </div>
+                <button type="submit" class="form-button">确认报名</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 联系方式页 -->
+    <section class="section contact-section">
+        <h2 class="section-title">联系我们</h2>
+        <div class="contact-content">
+            <div class="contact-item">
+                <div class="contact-label">联系人</div>
+                <div class="contact-value">苏玲茵（家庭总监）</div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-label">联系电话</div>
+                <div class="contact-value">17369866711</div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-label">微信</div>
+                <div class="contact-value">17369866711</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 分享页 -->
+    <section class="section share-section">
+        <h2 class="section-title">分享邀请</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 1rem; color: #333;">快来邀请更多朋友参加我们的家庭日活动吧！</p>
+        <div class="share-buttons">
+            <a href="#" class="share-button" onclick="shareToWechat()">
+                <i class="fab fa-weixin"></i>
+                微信分享
+            </a>
+            <a href="#" class="share-button" onclick="shareToWeibo()">
+                <i class="fab fa-weibo"></i>
+                微博分享
+            </a>
+            <a href="#" class="share-button" onclick="shareToQQ()">
+                <i class="fab fa-qq"></i>
+                QQ分享
+            </a>
+        </div>
+    </section>
+
+    <script>
+        // 音乐控制
+        let isPlaying = false;
+        const bgMusic = document.getElementById("bgMusic");
+        const musicIcon = document.getElementById("musicIcon");
+
+        function toggleMusic() {
+            if (isPlaying) {
+                bgMusic.pause();
+                musicIcon.className = "fas fa-music";
+                isPlaying = false;
+            } else {
+                bgMusic.play().catch(e => {
+                    console.log("音乐播放失败:", e);
+                });
+                musicIcon.className = "fas fa-pause";
+                isPlaying = true;
+            }
+        }
+
+        // 自动播放音乐（需要用户交互后才能播放）
+        document.addEventListener("click", function() {
+            if (!isPlaying) {
+                bgMusic.play().then(() => {
+                    musicIcon.className = "fas fa-pause";
+                    isPlaying = true;
+                }).catch(e => {
+                    console.log("自动播放失败:", e);
+                });
+            }
+        }, { once: true });
+
+        // 平滑滚动
+        document.querySelectorAll("a[href^=\"#\"]").forEach(anchor => {
+            anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute("href"));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+                }
+            });
+        });
+
+        // 滚动指示器点击事件
+        document.querySelector(".scroll-indicator").addEventListener("click", function() {
+            document.querySelector(".slogan-section").scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+
+        // 表单提交
+        document.getElementById("registrationForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // 这里可以添加实际的表单提交逻辑
+            alert("报名信息已提交！我们会尽快与您联系确认。");
+            
+            // 重置表单
+            this.reset();
+        });
+
+        // 分享功能
+        function shareToWechat() {
+            // 微信分享逻辑
+            if (navigator.share) {
+                navigator.share({
+                    title: "五星93家庭日邀请函",
+                    text: "五星93全体成员邀您来参加欢乐家庭日！",
+                    url: window.location.href
+                });
+            } else {
+                // 复制链接到剪贴板
+                navigator.clipboard.writeText(window.location.href).then(() => {
+                    alert("链接已复制到剪贴板，请在微信中分享！");
+                });
+            }
+        }
+
+        function shareToWeibo() {
+            const url = encodeURIComponent(window.location.href);
+            const title = encodeURIComponent("五星93家庭日邀请函 - 五星93全体成员邀您来参加欢乐家庭日！");
+            window.open(`https://service.weibo.com/share/share.php?url=${url}&title=${title}`, "_blank");
+        }
+
+        function shareToQQ() {
+            const url = encodeURIComponent(window.location.href);
+            const title = encodeURIComponent("五星93家庭日邀请函");
+            const desc = encodeURIComponent("五星93全体成员邀您来参加欢乐家庭日！");
+            window.open(`https://connect.qq.com/widget/shareqq/index.html?url=${url}&title=${title}&desc=${desc}`, "_blank");
+        }
+
+        // 页面加载动画
+        window.addEventListener("load", function() {
+            document.body.style.opacity = "0";
+            document.body.style.transition = "opacity 0.5s ease-in-out";
+            setTimeout(() => {
+                document.body.style.opacity = "1";
+            }, 100);
+        });
+
+        // 滚动动画
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, observerOptions);
+
+        // 为所有卡片添加滚动动画
+        document.querySelectorAll(".team-card, .photo-card, .intro-card, .timeline-item").forEach(el => {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(30px)";
+            el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const music = document.getElementById('background-music');
+            const musicControl = document.getElementById('music-control');
+            const musicIcon = musicControl.querySelector('i');
+
+            let isPlaying = false;
+
+            // 尝试自动播放
+            music.play().then(() => {
+                isPlaying = true;
+                musicIcon.classList.remove('fa-volume-mute');
+                musicIcon.classList.add('fa-music');
+            }).catch(error => {
+                // 自动播放失败，通常是因为浏览器策略，等待用户交互
+                isPlaying = false;
+                musicIcon.classList.remove('fa-music');
+                musicIcon.classList.add('fa-volume-mute');
+            });
+
+            musicControl.addEventListener('click', function() {
+                if (isPlaying) {
+                    music.pause();
+                    musicIcon.classList.remove('fa-music');
+                    musicIcon.classList.add('fa-volume-mute');
+                } else {
+                    music.play();
+                    musicIcon.classList.remove('fa-volume-mute');
+                    musicIcon.classList.add('fa-music');
+                }
+                isPlaying = !isPlaying;
+            });
+        });
+    </script>
+</body>
+</html>
+
