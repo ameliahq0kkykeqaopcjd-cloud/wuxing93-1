@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五星93家庭日邀请函</title>
+    <meta property="og:title" content="五星93家庭日邀请函">
+    <meta property="og:description" content="五星93全体成员邀您来参加欢乐家庭日！">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #FFF0F5 0%, #FFDAB9 50%, #FFF8DC 100%);
+            background-image: url('G3oEBEjBYtjc.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            z-index: -1;
+        }
+
+        /* 蜡笔小新装饰元素 */
+        .decoration {
+            position: fixed;
+            z-index: 1000;
+            pointer-events: none;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .decoration img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+        }
+
+        .decoration:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
+        .decoration:nth-child(2) { top: 20%; right: 10%; animation-delay: 1s; }
+        .decoration:nth-child(3) { bottom: 30%; left: 8%; animation-delay: 2s; }
+        .decoration:nth-child(4) { bottom: 15%; right: 5%; animation-delay: 0.5s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-25px) rotate(8deg); }
+        }
+
+        /* 音乐控制按钮 */
+        .music-control {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1001;
+            background: rgba(255, 255, 255, 0.9);
+            border: 3px solid #FF69B4;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .music-control:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .music-control i {
+            font-size: 1.5rem;
+            color: #FF1493;
+        }
+
+        /* 封面页 */
+        .hero-section {
+            height: 100vh;
+            background: linear-gradient(135deg, #FFF0F5 0%, #FFDAB9 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #333;
+            position: relative;
+            overflow: hidden;
+            padding: 2rem;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+        }
+
+        .main-character {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 2rem;
+            animation: bounce 2s infinite;
+            filter: drop-shadow(3px 3px 6px rgba(0,0,0,0.3));
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #FF69B4;
+        }
+
+        .main-character img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            25% { transform: translateY(-25px); }
+            50% { transform: translateY(0); }
+            75% { transform: translateY(-15px); }
+        }
+
+        .hero-title {
+            font-size: 2.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #FF1493;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+        }
+
+        .hero-subtitle {
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+            color: #4169E1;
+            font-weight: 600;
+        }
+
+        .event-info {
+            background: rgba(255,255,255,0.95);
+            border-radius: 25px;
+            padding: 2rem;
+            margin-top: 1rem;
+            border: 4px solid #FF69B4;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .event-date {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #FF1493;
+        }
+
+        .event-time {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #4169E1;
+        }
+
+        .event-location {
+            font-size: 1.1rem;
+            color: #4169E1;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            z-index: 2;
+        }
+
+        .scroll-indicator i {
+            font-size: 2rem;
+            color: #FF1493;
+        }
+
+        /* 队呼页 */
+        .slogan-section {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #FF69B4 0%, #FFC0CB 100%);
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .slogan-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .slogan-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .slogan-text {
+            font-size: 2rem;
+            font-weight: bold;
+            background: rgba(255,255,255,0.2);
+            border-radius: 25px;
+            padding: 2rem;
+            border: 4px solid rgba(255,255,255,0.4);
+            backdrop-filter: blur(15px);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* 邀请函页 */
+        .invitation-section {
+            background: linear-gradient(135deg, #FFDAB9 0%, #FFC0CB 50%, #FFB6C1 100%);
+            padding: 4rem 2rem;
+        }
+
+        .invitation-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .invitation-card {
+            background: white;
+            border-radius: 30px;
+            padding: 3rem;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            border: 5px solid #FF69B4;
+            position: relative;
+            overflow: hidden;
+            transform: rotate(-1deg);
+        }
+
+        .invitation-card:hover {
+            transform: translateY(-15px) rotate(1deg) scale(1.02);
+            box-shadow: 0 35px 70px rgba(0,0,0,0.3);
+        }
+
+        .invitation-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            gap: 1.5rem;
+        }
+
+        .invitation-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #FF69B4;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .invitation-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .invitation-title {
+            font-size: 2.0rem;
+            font-weight: bold;
+            color: #FF69B4;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .invitation-message {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .invitation-message p {
+            margin-bottom: 1.5rem;
+            text-indent: 2em;
+        }
+
+        .invitation-highlight {
+            font-weight: bold;
+            color: #FF1493 !important;
+            font-size: 1.2rem !important;
+            text-align: center;
+            background: linear-gradient(135deg, #FFE4E1, #FFC0CB);
+            padding: 1rem;
+            border-radius: 15px;
+            border: 2px solid #FF69B4;
+            text-indent: 0 !important;
+        }
+
+        /* 通用样式 */
+        .section {
+            padding: 4rem 2rem;
+            position: relative;
+            background: linear-gradient(135deg, #FFF0F5 0%, #FFDAB9 50%, #FFF8DC 100%);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #FF1493;
+            margin-bottom: 3rem;
+            position: relative;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            z-index: 2;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 8px;
+            background: linear-gradient(to right, #FF1493, #FF69B4);
+            border-radius: 4px;
+        }
+
+        /* 团队风采页 */
+        .team-section {
+            background: linear-gradient(to bottom, #FFD700 0%, #FFA500 100%);
+        }
+
+        .team-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 4px solid #FF69B4;
+            position: relative;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px) rotate(2deg);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+        }
+
+        .team-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: contain;
+            background-color: #F0F8FF;
+            padding: 10px;
+        }
+
+        .team-card-content {
+            padding: 1.5rem;
+        }
+
+        .team-card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .team-card-role {
+            color: #666;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        /* 照片展示页 */
+        .photos-section {
+            background: linear-gradient(135deg, #ADD8E6 0%, #87CEEB 100%);
+        }
+
+        .photos-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .photo-card {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 4px solid #FF69B4;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-10px) rotate(-2deg);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: contain;
+            background-color: #F0F8FF;
+            padding: 10px;
+        }
+
+        .photo-card-content {
+            padding: 1.5rem;
+        }
+
+        .photo-card-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .photo-card-description {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* 活动介绍页 */
+        .intro-section {
+            background: linear-gradient(135deg, #FFECB3 0%, #FFD700 100%);
+        }
+
+        .intro-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .intro-card {
+            background: white;
+            border-radius: 25px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 4px solid #FF69B4;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intro-card:hover {
+            transform: translateY(-15px) rotate(-2deg);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            color: #FF1493;
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .card-description {
+            color: #666;
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        /* 活动流程页 */
+        .schedule-section {
+            background: linear-gradient(135deg, #E6E6FA 0%, #DDA0DD 100%);
+        }
+
+        .schedule-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .schedule-item {
+            background: white;
+            border-radius: 25px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border: 4px solid #FF69B4;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .schedule-item:hover {
+            transform: translateY(-10px) rotate(1deg);
+        }
+
+        .schedule-time {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #FF1493;
+            margin-bottom: 1rem;
+        }
+
+        .schedule-activity {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .schedule-description {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        /* 联系方式页 */
+        .contact-section {
+            background: linear-gradient(135deg, #F0E68C 0%, #FFD700 100%);
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-card {
+            background: white;
+            border-radius: 30px;
+            padding: 3rem;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+            border: 5px solid #FF69B4;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #FF1493;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .contact-highlight {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #FF1493;
+            background: linear-gradient(135deg, #FFE4E1, #FFC0CB);
+            padding: 1rem;
+            border-radius: 15px;
+            border: 2px solid #FF69B4;
+            margin: 1rem 0;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .team-grid,
+            .photos-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .intro-content {
+                grid-template-columns: 1fr;
+            }
+
+            .invitation-card {
+                padding: 2rem;
+            }
+
+            .decoration img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 蜡笔小新装饰元素 -->
+    <div class="decoration">
+        <img src="sticker1.webp" alt="蜡笔小新贴纸1">
+    </div>
+    <div class="decoration">
+        <img src="sticker2.webp" alt="蜡笔小新贴纸2">
+    </div>
+    <div class="decoration">
+        <img src="sticker3.webp" alt="蜡笔小新贴纸3">
+    </div>
+    <div class="decoration">
+        <img src="sticker4.webp" alt="蜡笔小新贴纸4">
+    </div>
+
+    <!-- 音乐控制按钮 -->
+    <div class="music-control" onclick="toggleMusic()">
+        <i class="fas fa-music" id="musicIcon"></i>
+    </div>
+
+    <!-- 背景音乐 -->
+    <audio id="backgroundMusic" loop>
+        <source src="曲算子-雪龙吟.mp3" type="audio/mpeg">
+        您的浏览器不支持音频播放。
+    </audio>
+
+    <!-- 封面页 -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="main-character">
+                <img src="PRoIpU1ou1jy.webp" alt="蜡笔小新">
+            </div>
+            <h1 class="hero-title">五星93家庭日邀请函</h1>
+            <p class="hero-subtitle">五星93全体成员邀您来参加欢乐家庭日</p>
+            <div class="event-info">
+                <div class="event-date">2025年9月20日（星期六）</div>
+                <div class="event-time">13:00 - 20:00</div>
+                <div class="event-location">台州市路桥区螺洋街道水心草堂<br>（洳婳·宋韵）</div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- 队呼页 -->
+    <section class="slogan-section">
+        <div class="slogan-content">
+            <h2 class="slogan-title">93队呼</h2>
+            <div class="slogan-text">五星93，王者出山！</div>
+        </div>
+    </section>
+
+    <!-- 邀请函页 -->
+    <section class="invitation-section">
+        <div class="invitation-content">
+            <div class="invitation-card">
+                <div class="invitation-header">
+                    <div class="invitation-avatar">
+                        <img src="PRoIpU1ou1jy.webp" alt="蜡笔小新">
+                    </div>
+                    <h2 class="invitation-title">五星93家庭日邀请函</h2>
+                </div>
+                <div class="invitation-message">
+                    <p>亲爱的五星93家人们（1-92届的师兄师姐们）：</p>
+                    
+                    <p>时光荏苒，岁月如歌。转眼间，我们已经从青涩的模样，成长为各行各业的中坚力量。还记得那些年我们一起在五星大家庭里度过的欢乐时光吗？那些一起奋斗、一起欢笑、一起流泪的日子，仿佛就在昨天，历历在目。</p>
+                    
+                    <p>我们曾一起在训练场上挥洒汗水，为了共同的目标而努力拼搏；我们曾在篝火晚会上手拉手，分享彼此的梦想和喜悦；我们曾在一次次的团队活动中，结下深厚的友谊，成为彼此生命中最坚实的依靠。这些珍贵的记忆，如同闪亮的星星，点缀着我们人生的夜空，温暖而明亮。</p>
+                    
+                    <p>为了重温那段激情燃烧的岁月，为了再次感受那份纯真而热烈的友情，我们诚挚地邀请您——我们最亲爱的1-92届的师兄师姐们，参加"五星93家庭日"！这不仅仅是一场简单的聚会，更是一次心灵的回归，一次青春的重逢。在这里，没有工作的烦恼，没有生活的琐碎，只有我们，这群永远的五星人，和我们共同拥有的美好回忆。</p>
+                    
+                    <p>本次家庭日，我们特别选择了风景秀丽、充满诗情画意的水心草堂，希望在这片宁静雅致的天地里，大家可以彻底放松身心，畅叙友情。我们准备了丰富多彩的活动，希望能带给您一个难忘的周末。让我们一起，在欢声笑语中，找回当年的那份悸动与热爱，让我们的心，再次紧紧地连接在一起。</p>
+                    
+                    <p>您的到来，对我们意义非凡。因为有您，五星93的大家庭才更加完整；因为有您，我们的家庭日才更加充满温情与意义。请暂时放下繁忙的工作，带上您的家人，一起来参加这场属于我们自己的盛会吧！</p>
+                    
+                    <p>我们翘首以盼，期待与您重逢！</p>
+                    
+                    <p class="invitation-highlight">五星93，期待与你相遇！</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 团队风采页 -->
+    <section class="section team-section">
+        <h2 class="section-title">团队风采</h2>
+        <div class="team-grid">
+            <!-- 导师 -->
+            <div class="team-card">
+                <img src="导师朴日勇.png" alt="导师朴日勇">
+                <div class="team-card-content">
+                    <div class="team-card-title">朴日勇</div>
+                    <div class="team-card-role">导师</div>
+                </div>
+            </div>
+            <!-- 平台天使导师 -->
+            <div class="team-card">
+                <img src="平台天使导师张怡.jpg" alt="平台天使导师张怡">
+                <div class="team-card-content">
+                    <div class="team-card-title">张怡</div>
+                    <div class="team-card-role">平台天使导师</div>
+                </div>
+            </div>
+            <!-- 教练团总教练 -->
+            <div class="team-card">
+                <img src="教练团总教练蒋国忠.jpg" alt="教练团总教练蒋国忠">
+                <div class="team-card-content">
+                    <div class="team-card-title">蒋国忠</div>
+                    <div class="team-card-role">教练团总教练</div>
+                </div>
+            </div>
+            <!-- 教练团团长 -->
+            <div class="team-card">
+                <img src="教练团团长胡军.jpg" alt="教练团团长胡军">
+                <div class="team-card-content">
+                    <div class="team-card-title">胡军</div>
+                    <div class="team-card-role">教练团团长</div>
+                </div>
+            </div>
+            <!-- 教练们 -->
+            <div class="team-card">
+                <img src="教练方利娇.jpg" alt="教练方利娇">
+                <div class="team-card-content">
+                    <div class="team-card-title">方利娇</div>
+                    <div class="team-card-role">教练</div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="教练孙涛涛.jpg" alt="教练孙涛涛">
+                <div class="team-card-content">
+                    <div class="team-card-title">孙涛涛</div>
+                    <div class="team-card-role">教练</div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="教练金飞.jpg" alt="教练金飞">
+                <div class="team-card-content">
+                    <div class="team-card-title">金飞</div>
+                    <div class="team-card-role">教练</div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="教练倪红.jpg" alt="教练倪红">
+                <div class="team-card-content">
+                    <div class="team-card-title">倪红</div>
+                    <div class="team-card-role">教练</div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="教练郑超.jpg" alt="教练郑超">
+                <div class="team-card-content">
+                    <div class="team-card-title">郑超</div>
+                    <div class="team-card-role">教练</div>
+                </div>
+            </div>
+            <!-- 学员大队长 -->
+            <div class="team-card">
+                <img src="学员大队长周熹.jpg" alt="学员大队长周熹">
+                <div class="team-card-content">
+                    <div class="team-card-title">周熹</div>
+                    <div class="team-card-role">学员大队长</div>
+                </div>
+            </div>
+            <!-- 各总监 -->
+            <div class="team-card">
+                <img src="心连心总监范军辉.jpg" alt="心连心总监范军辉">
+                <div class="team-card-content">
+                    <div class="team-card-title">范军辉</div>
+                    <div class="team-card-role">心连心总监</div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="家庭总监苏玲茵.jpg" alt="家庭总监苏玲茵">
+                <div class="team-card-content">
+                    <div class="team-card-title">苏玲茵</div>
+                    <div class="team-card-role">家庭总监</div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="事业总监张文.jpg" alt="事业总监张文">
+                <div class="team-card-content">
+                    <div class="team-card-title">张文</div>
+                    <div class="team-card-role">事业总监</div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="财务总监叶家成.jpg" alt="财务总监叶家成">
+                <div class="team-card-content">
+                    <div class="team-card-title">叶家成</div>
+                    <div class="team-card-role">财务总监</div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="健康总监吴兴跃.jpg" alt="健康总监吴兴跃">
+                <div class="team-card-content">
+                    <div class="team-card-title">吴兴跃</div>
+                    <div class="team-card-role">健康总监</div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="守则总监钟伙秀.jpg" alt="守则总监钟伙秀">
+                <div class="team-card-content">
+                    <div class="team-card-title">钟伙秀</div>
+                    <div class="team-card-role">守则总监</div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="形象总监罗鹤燕.jpg" alt="形象总监罗鹤燕">
+                <div class="team-card-content">
+                    <div class="team-card-title">罗鹤燕</div>
+                    <div class="team-card-role">形象总监</div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="学习总监张康.jpg" alt="学习总监张康">
+                <div class="team-card-content">
+                    <div class="team-card-title">张康</div>
+                    <div class="team-card-role">学习总监</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 精彩回忆页 -->
+    <section class="section photos-section">
+        <h2 class="section-title">精彩回忆</h2>
+        <div class="photos-grid">
+            <div class="photo-card">
+                <img src="91心连心活动出发仪式.jpg" alt="91心连心活动出发仪式">
+                <div class="photo-card-content">
+                    <div class="photo-card-title">91心连心活动出发仪式</div>
+                    <div class="photo-card-description">心连心活动启动，传递温暖与关爱</div>
+                </div>
+            </div>
+            <div class="photo-card">
+                <img src="92家庭日合照.jpg" alt="92家庭日合照">
+                <div class="photo-card-content">
+                    <div class="photo-card-title">92家庭日合照</div>
+                    <div class="photo-card-description">家庭日活动，温馨合影</div>
+                </div>
+            </div>
+            <div class="photo-card">
+                <img src="93团队快乐合影.jpg" alt="93团队快乐合影">
+                <div class="photo-card-content">
+                    <div class="photo-card-title">93团队快乐合影</div>
+                    <div class="photo-card-description">团队成员欢聚一堂，笑容满面</div>
+                </div>
+            </div>
+            <div class="photo-card">
+                <img src="93三阶段首周团队合影.jpg" alt="93三阶段首周团队合影">
+                <div class="photo-card-content">
+                    <div class="photo-card-title">93三阶段首周团队合影</div>
+                    <div class="photo-card-description">新阶段新开始，团队合影留念</div>
+                </div>
+            </div>
+            <div class="photo-card">
+                <img src="93中周合影，雨后见彩虹.jpg" alt="93中周合影，雨后见彩虹">
+                <div class="photo-card-content">
+                    <div class="photo-card-title">93中周合影，雨后见彩虹</div>
+                    <div class="photo-card-description">风雨过后见彩虹，团队精神永不灭</div>
+                </div>
+            </div>
+            <div class="photo-card">
+                <img src="93大合影.jpg" alt="93大合影">
+                <div class="photo-card-content">
+                    <div class="photo-card-title">93大合影</div>
+                    <div class="photo-card-description">五星93全体成员大合影</div>
+                </div>
+            </div>
+            <div class="photo-card">
+                <img src="94一阶段毕业接学弟学妹毕业.jpg" alt="94一阶段毕业接学弟学妹毕业">
+                <div class="photo-card-content">
+                    <div class="photo-card-title">94一阶段毕业接学弟学妹毕业</div>
+                    <div class="photo-card-description">传承精神，迎接新成员加入</div>
+                </div>
+            </div>
+            <div class="photo-card">
+                <img src="爱心活动.jpg" alt="爱心活动">
+                <div class="photo-card-content">
+                    <div class="photo-card-title">爱心活动</div>
+                    <div class="photo-card-description">参与公益，传递爱心正能量</div>
+                </div>
+            </div>
+            <div class="photo-card">
+                <img src="爱心活动1.jpg" alt="爱心活动">
+                <div class="photo-card-content">
+                    <div class="photo-card-title">爱心活动</div>
+                    <div class="photo-card-description">团队成员积极参与社会公益</div>
+                </div>
+            </div>
+            <div class="photo-card">
+                <img src="暖阳城市公益活动.jpg" alt="暖阳城市公益活动">
+                <div class="photo-card-content">
+                    <div class="photo-card-title">暖阳城市公益活动</div>
+                    <div class="photo-card-description">参与城市公益，传递暖阳精神</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 活动亮点页 -->
+    <section class="section intro-section">
+        <h2 class="section-title">活动亮点</h2>
+        <div class="intro-content">
+            <div class="intro-card">
+                <div class="card-icon">🎉</div>
+                <div class="card-title">欢乐聚会</div>
+                <div class="card-description">与老朋友重逢，分享彼此的成长故事，重温青春岁月的美好时光。</div>
+            </div>
+            <div class="intro-card">
+                <div class="card-icon">🍽️</div>
+                <div class="card-title">美食盛宴</div>
+                <div class="card-description">精心准备的丰盛晚餐，让大家在品尝美食的同时，享受温馨的聚会氛围。</div>
+            </div>
+            <div class="intro-card">
+                <div class="card-icon">🎮</div>
+                <div class="card-title">趣味游戏</div>
+                <div class="card-description">精心设计的团队游戏和互动环节，让大家在欢声笑语中增进友谊。</div>
+            </div>
+            <div class="intro-card">
+                <div class="card-icon">📸</div>
+                <div class="card-title">珍贵回忆</div>
+                <div class="card-description">专业摄影师全程记录，为大家留下珍贵的聚会回忆和美好瞬间。</div>
+            </div>
+            <div class="intro-card">
+                <div class="card-icon">🎁</div>
+                <div class="card-title">精美礼品</div>
+                <div class="card-description">为每位参与者准备了精美的纪念礼品，作为这次聚会的美好纪念。</div>
+            </div>
+            <div class="intro-card">
+                <div class="card-icon">🌟</div>
+                <div class="card-title">温馨氛围</div>
+                <div class="card-description">在优美的环境中，感受家庭般的温暖，体验五星大家庭的凝聚力。</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 活动流程页 -->
+    <section class="section schedule-section">
+        <h2 class="section-title">活动流程</h2>
+        <div class="schedule-content">
+            <div class="schedule-item">
+                <div class="schedule-time">13:00 - 14:00</div>
+                <div class="schedule-activity">签到入场</div>
+                <div class="schedule-description">欢迎各位家人到达现场，签到领取活动资料和纪念品</div>
+            </div>
+            <div class="schedule-item">
+                <div class="schedule-time">14:00 - 15:30</div>
+                <div class="schedule-activity">开场致辞 & 团队介绍</div>
+                <div class="schedule-description">活动开场，团队风采展示，重温五星93的光辉历程</div>
+            </div>
+            <div class="schedule-item">
+                <div class="schedule-time">15:30 - 17:00</div>
+                <div class="schedule-activity">互动游戏 & 自由交流</div>
+                <div class="schedule-description">精彩的团队游戏和自由交流时间，增进彼此友谊</div>
+            </div>
+            <div class="schedule-item">
+                <div class="schedule-time">17:00 - 19:00</div>
+                <div class="schedule-activity">晚餐时光</div>
+                <div class="schedule-description">享用精心准备的丰盛晚餐，在轻松愉快的氛围中畅谈</div>
+            </div>
+            <div class="schedule-item">
+                <div class="schedule-time">19:00 - 20:00</div>
+                <div class="schedule-activity">合影留念 & 活动总结</div>
+                <div class="schedule-description">全体合影留念，活动总结，期待下次相聚</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式页 -->
+    <section class="section contact-section">
+        <h2 class="section-title">联系我们</h2>
+        <div class="contact-content">
+            <div class="contact-card">
+                <div class="contact-title">报名咨询</div>
+                <div class="contact-info">如有任何疑问或需要帮助，请随时联系我们</div>
+                <div class="contact-highlight">苏玲茵（家庭总监）</div>
+                <div class="contact-info">联系电话：17369866711</div>
+                <div class="contact-info">微信：17369866711</div>
+                <div class="contact-info" style="margin-top: 2rem; font-size: 1.1rem; color: #FF1493;">
+                    期待您的参与，让我们一起创造美好回忆！
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let isPlaying = false;
+        const music = document.getElementById('backgroundMusic');
+        const musicIcon = document.getElementById('musicIcon');
+
+        function toggleMusic() {
+            if (isPlaying) {
+                music.pause();
+                musicIcon.className = 'fas fa-music';
+                isPlaying = false;
+            } else {
+                music.play().then(() => {
+                    musicIcon.className = 'fas fa-pause';
+                    isPlaying = true;
+                }).catch(error => {
+                    console.log('音频播放失败:', error);
+                    alert('音频播放失败，请检查音频文件是否存在');
+                });
+            }
+        }
+
+        // 平滑滚动
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollIndicator = document.querySelector('.scroll-indicator');
+            if (scrollIndicator) {
+                scrollIndicator.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: window.innerHeight,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
+
+        // 图片加载错误处理
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.addEventListener('error', function() {
+                    console.log('图片加载失败:', this.src);
+                    this.style.backgroundColor = '#f0f0f0';
+                    this.style.display = 'flex';
+                    this.style.alignItems = 'center';
+                    this.style.justifyContent = 'center';
+                    this.alt = '图片加载中...';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
